@@ -14,4 +14,13 @@ import student.adventure.Game;
 public class Adventure
 {
    // Time to build
+    public String welcomeMessage() {
+        return "hello";
+    }
+    public void takeCommand() {
+        
+    }
+    public void challengeCommand() {
+        
+    }
 }
