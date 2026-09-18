@@ -1,0 +1,15 @@
+package finalCode;
+public class Weapon
+{
+    //~ Fields ................................................................
+    private String name;
+    private int strength;
+    private boolean removable;
+    //~ Constructors ..........................................................
+    public Weapon(String newName, int newStrength, boolean newRemovable)
+    {
+        
+    }
+    //~Public  Methods ........................................................
+
+}
