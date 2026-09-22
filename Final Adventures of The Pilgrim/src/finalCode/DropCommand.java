@@ -1,6 +1,6 @@
 package ADVOTPHALF;
-import student.adventure.Game;
-public class DropCommand
+import student.adventure.*;
+public class DropCommand extends Command
 
 
 {
@@ -9,5 +9,7 @@ public class DropCommand
     //~ Constructors ..........................................................
 
     //~Public  Methods ........................................................
-
+    public boolean execute(Player player) {
+        
+    }
 }

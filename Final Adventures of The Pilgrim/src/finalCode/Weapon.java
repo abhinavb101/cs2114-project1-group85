@@ -8,8 +8,10 @@ public class Weapon
     //~ Constructors ..........................................................
     public Weapon(String newName, int newStrength, boolean newRemovable)
     {
-        
+        name = newName;
+        strength = newStrength;
+        removable = newRemovable;
     }
     //~Public  Methods ........................................................
-
+    
 }
