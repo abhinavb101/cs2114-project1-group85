@@ -7,6 +7,7 @@ public class Location extends Room
     
     private List<VitalityItem> vitBag;
     private List<Weapon> weaponBag;
+    private List<Enemies> enemyBag;
     private boolean event;
     //~ Constructors ..........................................................
     /**
@@ -19,6 +20,7 @@ public class Location extends Room
         event = newEvent;
         vitBag = new ArrayList<VitalityItem>();
         weaponBag = new ArrayList<Weapon>();
+        enemyBag = new ArrayList<Enemies>();
     }
     //~Public  Methods ........................................................
     public void addItem(VitalityItem added)
@@ -29,6 +31,25 @@ public class Location extends Room
     public void addItem(Weapon added)
     {
         weaponBag.add(added);
+    }
+    
+    public void addEnemy(Enemies enemy)
+    {
+        enemyBag.add(enemy);
+    }
+    
+    public Enemies removeEnemy(String removed)
+    {
+        for (int i = 0; i < enemyBag.size(); i++)
+        {
+            Enemies enemy = enemyBag.get(i);
+            if (enemy.getName().equals(removed))
+            {
+                vitBag.remove(i);
+                return enemy;
+            }
+        }
+        return null;
     }
     
     public VitalityItem removeVitItem(String removed)
