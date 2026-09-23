@@ -25,7 +25,6 @@ public ChallengeCommand(Adventure game, Pilgrim pilgrim, Enemies enemy) {
         this.pilgrim = pilgrim;
         this.enemy = enemy;
     }
-    }
     
     public void execute(Pilgrim pilgrim, String enemyName) {
         Scanner scan = new Scanner(System.in);

@@ -17,7 +17,7 @@ public class Wolf extends Enemies
     //~Public  Methods ........................................................
     //if wolf is dead, drop weak item
     public void wolfReward(Wolf wolf, Pilgrim pilgrim) {
-        if(wolf.health == 0) {
+        if(!wolf.isAlive()) {
             //decide which one to use
             pilgrim.addItem(rewardWeapon); //change into items?
             wolf.dropReward();
