@@ -5,6 +5,9 @@ public class Bandit extends Enemies
 {
     //~ Fields ................................................................
     private String name;
+{
+    //~ Fields ................................................................
+    private String name;
     private int damage;
     private int health;
     private boolean chance;

@@ -19,10 +19,12 @@ public class ChallengeCommand extends Combat
     private Enemies enemy;
     
     //~ Fields ................................................................
-    
-    public ChallengeCommand(Pilgrim pilgrim, Enemies enemy, Adventure game) {
+public ChallengeCommand(Adventure game, Pilgrim pilgrim, Enemies enemy) {
         super(pilgrim, enemy);
+        this.game = game;
+        this.pilgrim = pilgrim;
         this.enemy = enemy;
+    }
     }
     
     public void execute(Pilgrim pilgrim, String enemyName) {
