@@ -2,10 +2,12 @@ package finalCode;
 public class Obstacle
 {
     String name;
+    String description;
     int damage;
     
-    public Obstacle(String newName, int newDamage) {
+    public Obstacle(String newName, String newDescription, int newDamage) {
         name = newName;
+        description = newDescription;
         damage = newDamage;
     }   
     String getName() {
