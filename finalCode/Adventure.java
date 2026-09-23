@@ -27,6 +27,14 @@ public class Adventure
         commands.addCommand("go", new GoCommand());
         commands.addCommand("Help", new HelpCommand(commands));
         commands.addCommand("quit", new QuitCommand());
+        commands.addCommand("north", new MovementCommand("north"));
+        commands.addCommand("south", new MovementCommand("south"));
+        commands.addCommand("east", new MovementCommand("east"));
+        commands.addCommand("west", new MovementCommand("west"));
+        commands.addCommand("northeast", new MovementCommand("northeast"));
+        commands.addCommand("southeast", new MovementCommand("southeast"));
+        commands.addCommand("northwest", new MovementCommand("northwest"));
+        commands.addCommand("southwest", new MovementCommand("southwest"));
     }
 
 
@@ -48,22 +56,16 @@ public class Adventure
         SunCross.addEnemy(bandit);
         
     }
-
-
-    public Pilgrim getPilgrim()
-    {
-        return null;
-    }
-
+    
 
     public void placeItems()
     {
-
+        //Place
     }
 
 
     public void connectRooms()
     {
-
+        
     }
 }
