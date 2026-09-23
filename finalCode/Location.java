@@ -68,4 +68,41 @@ public class Location extends Room
     {
         return weaponBag;
     }
+    
+    public String getLongDescription()
+    {
+        String original = super.getLongDescription();
+        if (vitBag.isEmpty() && weaponBag.isEmpty())
+        {
+            return original;
+        }
+        else if (weaponBag.isEmpty())
+        {
+            original += "\nVitality Items found here:";
+            int count = 0;
+            while (count < vitBag.size() - 1)
+            {
+                original += vitBag.get(count).getName() + ", ";
+                count++;
+            }
+            original += vitBag.get(count).getName();
+        }
+        else if (vitBag.isEmpty())
+        {
+            original += "\nWeapons found here:";
+            int count = 0;
+            while (count < weaponBag.size() - 1)
+            {
+                original += weaponBag.get(count).getName() + ", ";
+                count++;
+            }
+            original += weaponBag.get(count).getName();
+        }
+        else
+        {
+            original += "sum";
+            // NOT DONE//
+        }
+        return original;
+    }
 }
