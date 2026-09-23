@@ -5,24 +5,26 @@ public class DropCommand extends Command
 
 {
     //~ Fields ................................................................
-    private Adventure game;
-    private Pilgrim pilgrim;
+
     //~ Constructors ..........................................................
-    public DropCommand(Adventure game, Pilgrim pilgrim) {
-        this.game = game;
-        this.pilgrim = pilgrim;
+    public DropCommand() {
+        super();
     }
     //~Public  Methods ........................................................
-    public void execute(VitalityItem item) {
-        //
-        int i = 0;
-        boolean found = false;
-        while(i < pilgrim.inventory.size() && !found) {
-            if(pilgrim.inventory.get(i).equals(item)) {
-                pilgrim.inventory.remove(i);
-                found = true;
-            }
+    public boolean execute(Player player) {
+        Pilgrim guy = (Pilgrim) player;
+        if (!hasSecondWord())
+        {
+            System.out.println("What do you want to drop?");
+            return false;
         }
-        
+        String item = getSecondWord().toLowerCase();
+        //Item dropped = guy.removeItem(item);
+        //if (dropped) == null)
+        //{
+            //System.out.println(item + "is not in your bag.");
+            //return false;
+        //}
+        return false;
     }
 }
