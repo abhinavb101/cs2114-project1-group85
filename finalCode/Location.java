@@ -20,6 +20,7 @@ public class Location extends Room
         event = newEvent;
         vitBag = new ArrayList<VitalityItem>();
         weaponBag = new ArrayList<Weapon>();
+        
         enemyBag = new ArrayList<Enemies>();
     }
     //~Public  Methods ........................................................

@@ -44,6 +44,7 @@ public class Adventure
         Weapon reward = new Weapon("Kunai","Throwable blades, sharp to the touch", true, 2);
         Enemies bandit = new Enemies("Weak Bandit", 2, 10, reward);    
         SunCross.addItem(brokenBlade);
+        
         SunCross.addEnemy(bandit);
         
     }

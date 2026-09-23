@@ -44,6 +44,10 @@ import java.util.*;
             return this.damage;
         }
         
+        public void addEnemy(Location loc) {
+            
+        }
+        
         public void setDamage(int newDamage)
         {
             this.damage = newDamage;
