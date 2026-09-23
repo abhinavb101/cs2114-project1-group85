@@ -21,5 +21,51 @@ public class Location extends Room
         weaponBag = new ArrayList<Weapon>();
     }
     //~Public  Methods ........................................................
-
+    public void addItem(VitalityItem added)
+    {
+        vitBag.add(added);
+    }
+    
+    public void addItem(Weapon added)
+    {
+        weaponBag.add(added);
+    }
+    
+    public VitalityItem removeVitItem(String removed)
+    {
+        for (int i = 0; i < vitBag.size(); i++)
+        {
+            VitalityItem item = vitBag.get(i);
+            if (item.getName().equals(removed))
+            {
+                vitBag.remove(i);
+                return item;
+            }
+        }
+        return null;
+    }
+    
+    public Weapon removeWeapon(String removed)
+    {
+        for (int i = 0; i < vitBag.size(); i++)
+        {
+            Weapon item = weaponBag.get(i);
+            if (item.getName().equals(removed))
+            {
+                weaponBag.remove(i);
+                return item;
+            }
+        }
+        return null;
+    }
+    
+    public List<VitalityItem> getVitItems()
+    {
+        return vitBag;
+    }
+    
+    public List<Weapon> getWeaponItems()
+    {
+        return weaponBag;
+    }
 }
