@@ -24,5 +24,8 @@ public class VitalityItem
     public int getWaterRecov() {
         return waterRecov;
     }
-    
+    public String getName()
+    {
+        return name;
+    }
 }
