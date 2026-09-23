@@ -12,7 +12,7 @@ public class ChallengeCommand
     public ChallengeCommand(Adventure game, Pilgrim pilgrim, Enemies enemy) {
         this.game = game;
         this.pilgrim = pilgrim;
-        this.enemy = enemy;
+        this.enemys = enemy;
     }
     
     public void execute(String enemyName, Enemies enemy) {

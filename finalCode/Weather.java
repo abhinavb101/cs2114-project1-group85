@@ -1,12 +1,12 @@
-package ADVOTPHALF;
+package finalCode;
 public class Weather extends Obstacle
 {
     //~ Fields ................................................................
     String name;
     int damage;
     //~ Constructors ..........................................................
-    public Weather(String newName, int newDamage) {
-        super(newName, newDamage);
+    public Weather(String name, int damage) {
+        super(name, damage);
     }
     //~Public  Methods ........................................................
 

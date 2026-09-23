@@ -6,12 +6,20 @@ public class Weapon
     private int strength;
     private boolean removable;
     //~ Constructors ..........................................................
-    public Weapon(String newName, int newStrength, boolean newRemovable)
+    public Weapon(String name, int strength, boolean removable)
     {
-        name = newName;
-        strength = newStrength;
-        removable = newRemovable;
+        this.name = name;
+        this.strength = strength;
+        this.removable = removable;
     }
     //~Public  Methods ........................................................
-    
+    public String getName() {
+        return name;
+    }
+    public int getStrength() {
+        return strength;
+    }
+    public boolean removablity() {
+        return removable;
+    }
 }
