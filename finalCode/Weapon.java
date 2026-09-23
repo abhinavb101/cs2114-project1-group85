@@ -4,21 +4,16 @@ public class Weapon extends Item
     //~ Fields ................................................................
     private int strength;
     //~ Constructors ..........................................................
-public Weapon(String newName, String newDescription, boolean newRemovable, 
+    public Weapon(String newName, String newDescription, boolean newRemovable, 
         int newStrength)
     {
         super(newName, newDescription, newRemovable);
         strength = newStrength;
     }
     //~Public  Methods ........................................................
-    public String getName() {
-        return name;
-    }
+    
     public int getStrength()
     {
         return strength;
-    }
-    public boolean removablity() {
-        return removable;
     }
 }
