@@ -16,10 +16,10 @@ import java.util.*;
         
         //~ Fields ................................................................
         
-        String name;
-        int damage;
-        int health;
-        Weapon rewardWeapon;
+        private String name;
+        private int damage;
+        private int health;
+        private Weapon rewardWeapon;
 
         //~ Constructors ..........................................................
         public Enemies(String name, int damage, int health, Weapon rewardWeapon) {
@@ -83,7 +83,9 @@ import java.util.*;
         
         public void dropReward()
         {
-            
+            if (!this.isAlive()) {
+                this.drop(rewardWeapon);
+            }
         }
        
     }

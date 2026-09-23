@@ -1,10 +1,15 @@
 package finalCode;
+
 import student.adventure.*;
-public class Adventure extends Game
+
+public class Adventure
+    extends Game
 {
-    public Adventure() {
+    public Adventure()
+    {
         super(new Pilgrim(), new Parser());
     }
+
 
     @Override
     public String welcomeMessage()
@@ -12,7 +17,8 @@ public class Adventure extends Game
         // TODO Auto-generated method stub
         return null;
     }
-    
+
+
     @Override
     public void createCommands()
     {
@@ -23,25 +29,38 @@ public class Adventure extends Game
         commands.addCommand("quit", new QuitCommand());
     }
 
+
     @Override
     public void createRooms()
     {
-        // TODO Auto-generated method stub
+
+        Location SunCross = new Location(
+            "You find yourself in Sunless Cross, "
+                + "an almost barren wastland deprived of any life, "
+                + "yet something lingers around you.",
+            false);
+        Weapon brokenBlade =
+            new Weapon("A worn down, completely broken blade ", 1, true);
+        
+        SunCross.addWeapon(brokenBlade);
         
     }
-    
+
+
     public Pilgrim getPilgrim()
     {
         return null;
     }
-    
+
+
     public void placeItems()
     {
-        
+
     }
-    
+
+
     public void connectRooms()
     {
-        
+
     }
 }

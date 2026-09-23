@@ -1,22 +1,21 @@
 package finalCode;
-public class Weapon
+public class Weapon extends Item
 {
     //~ Fields ................................................................
-    private String name;
     private int strength;
-    private boolean removable;
     //~ Constructors ..........................................................
-    public Weapon(String name, int strength, boolean removable)
+public Weapon(String newName, String newDescription, boolean newRemovable, 
+        int newStrength)
     {
-        this.name = name;
-        this.strength = strength;
-        this.removable = removable;
+        super(newName, newDescription, newRemovable);
+        strength = newStrength;
     }
     //~Public  Methods ........................................................
     public String getName() {
         return name;
     }
-    public int getStrength() {
+    public int getStrength()
+    {
         return strength;
     }
     public boolean removablity() {

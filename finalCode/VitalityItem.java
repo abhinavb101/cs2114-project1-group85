@@ -1,18 +1,21 @@
 package finalCode;
-public class VitalityItem
+public class VitalityItem extends Item
 {
     //~ Fields ................................................................
-    String name;
     int healthRecov;
     int foodRecov;
     int waterRecov;
     //~ Constructors ..........................................................
-    public VitalityItem(String name, int healthRecov, int foodRecov, int waterRecov)
+@SuppressWarnings("javadoc")
+    public VitalityItem(String newName, String newDescription, 
+        int newHealthRecov, int newFoodRecov, 
+        int newWaterRecov)
     {
-        this.name = name;
-        this.healthRecov = healthRecov;
-        this.foodRecov = foodRecov;
-        this.waterRecov = waterRecov;
+        super(newName, newDescription, false);
+        healthRecov = newHealthRecov;
+        foodRecov = newFoodRecov;
+        waterRecov = newWaterRecov;
+    }
     }
     //~Public  Methods ........................................................
     public int getHealthRecov() {
@@ -24,7 +27,7 @@ public class VitalityItem
     public int getWaterRecov() {
         return waterRecov;
     }
-    public boolean equals(Object other) {
+public boolean equals(Object other) {
         if(this == other) {
             return true;
         }
@@ -41,5 +44,4 @@ public class VitalityItem
         }
         return false;
     }
-    
 }
