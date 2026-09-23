@@ -1,4 +1,4 @@
-package AOTP;
+package finalCode;
 import student.adventure.*;
 import java.util.*;
 // -------------------------------------------------------------------------
@@ -22,7 +22,7 @@ public class Pilgrim extends Player
         health = 100;
         water = 100;
         food = 100;
-        strength = 10;
+        strength = 6;
         inventory = new ArrayList<Pilgrim>();
     }
     
@@ -48,12 +48,21 @@ public class Pilgrim extends Player
     
     public int getStrength()
     {
-        return strength;
+        int totalStrength = strength;
+        for (Weapon weapon: inventory) {
+            totalStrength += weapon.getStrength();
+        }
+        return totalStrength;
     }
     
     public List<Pilgrim> getInventory()
     {
         return inventory;
+    }
+    
+    public String inventoryToString()
+    {
+        return "You have: " + inventory;
     }
     
     public void addItem(Pilgrim weapon)
@@ -79,5 +88,21 @@ public class Pilgrim extends Player
     public void removeItem()
     {
         
+    }
+    
+    public void takeDamage(int damage) {
+        health -= damage;
+        
+        if (health < 0) {
+            health = 0;
+        }
+    }
+    
+    boolean isAlive() {
+        return health > 0;
+    }
+    
+    public void attack(Enemies enemy) {
+        enemy.takeDamage(this.getStrength());
     }
 }

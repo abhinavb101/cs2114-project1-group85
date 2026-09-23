@@ -17,7 +17,10 @@ public class Adventure extends Game
     public void createCommands()
     {
         // TODO Auto-generated method stub
-        
+        CommandWords commands = parser().commandWords();
+        commands.addCommand("go", new GoCommand());
+        commands.addCommand("Help", new HelpCommand(commands));
+        commands.addCommand("quit", new QuitCommand());
     }
 
     @Override
