@@ -31,7 +31,7 @@ public class Location extends Room
         weaponBag.add(added);
     }
     
-    public VitalityItem removeItem(String removed)
+    public VitalityItem removeVitItem(String removed)
     {
         for (int i = 0; i < vitBag.size(); i++)
         {
@@ -39,6 +39,20 @@ public class Location extends Room
             if (item.getName().equals(removed))
             {
                 vitBag.remove(i);
+                return item;
+            }
+        }
+        return null;
+    }
+    
+    public Weapon removeWeapon(String removed)
+    {
+        for (int i = 0; i < vitBag.size(); i++)
+        {
+            Weapon item = weaponBag.get(i);
+            if (item.getName().equals(removed))
+            {
+                weaponBag.remove(i);
                 return item;
             }
         }

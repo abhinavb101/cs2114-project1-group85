@@ -13,5 +13,18 @@ public class Weapon
         removable = newRemovable;
     }
     //~Public  Methods ........................................................
+    public String getName()
+    {
+        return name;
+    }
     
+    public int getStrength()
+    {
+        return strength;
+    }
+    
+    public boolean getRemovable()
+    {
+        return removable;
+    }
 }

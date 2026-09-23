@@ -1,4 +1,4 @@
-package ADVOTPHALF;
+package finalCode;
 public class FortunateEvent extends Obstacle
 {
     //~ Fields ................................................................
