@@ -5,10 +5,10 @@ public class Obstacle
     String description;
     int damage;
     
-    public Obstacle(String newName, String newDescription, int newDamage) {
-        name = newName;
-        description = newDescription;
-        damage = newDamage;
+    public Obstacle(String name, String description, int damage) {
+        this.name = name;
+        this.description = description;
+        this.damage = damage;
     }   
     String getName() {
         return name;

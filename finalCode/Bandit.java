@@ -3,9 +3,7 @@ import java.util.Random;
 
 public class Bandit extends Enemies
 {
-    //~ Fields ................................................................
-    private String name;
-{
+
     //~ Fields ................................................................
     private String name;
     private int damage;

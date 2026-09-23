@@ -16,7 +16,6 @@ public class VitalityItem extends Item
         foodRecov = newFoodRecov;
         waterRecov = newWaterRecov;
     }
-    }
     //~Public  Methods ........................................................
     public int getHealthRecov() {
         return healthRecov;
@@ -38,7 +37,7 @@ public boolean equals(Object other) {
             return false;
         }
         VitalityItem item = (VitalityItem)other;
-        if(this.name.equals(item.name) && this.healthRecov == item.healthRecov 
+        if(this.getName().equals(item.getName()) && this.healthRecov == item.healthRecov 
             && this.foodRecov == item.foodRecov && this.waterRecov == item.waterRecov) {
             return true;
         }
