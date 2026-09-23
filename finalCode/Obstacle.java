@@ -22,5 +22,4 @@ public class Obstacle
     void setDamage(int d) {
         damage = d;
     }
-    
 }
