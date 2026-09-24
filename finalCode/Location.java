@@ -90,6 +90,18 @@ public class Location extends Room
         return vitBag;
     }
     
+    public Enemies locateEnemy(String find)
+    {
+        for (int i = 0; i < enemyBag.size(); i++)
+        {
+            if (enemyBag.get(i).getName().equals(find))
+            {
+                return enemyBag.get(i);
+            }
+        }
+        return null;
+    }
+    
     public List<Weapon> getWeaponItems()
     {
         return weaponBag;

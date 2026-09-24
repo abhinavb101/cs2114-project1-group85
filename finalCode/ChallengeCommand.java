@@ -30,32 +30,32 @@ public ChallengeCommand() {
         }
         String enemyName = getSecondWord().toLowerCase();
         Location currentRoom = (Location) p.getCurrentRoom();
-        Enemies enemy = currentRoom.removeEnemy(enemyName);
-        Scanner scan = new Scanner(System.in);
+        Enemies enemy = currentRoom.locateEnemy(enemyName);
             while (p.isAlive() && enemy.isAlive()) {
             System.out.println("-- Combat Begins! --" + 
         "/nActions: [Use Item] // [Attack]");
         
             if (scan.equals("Attack")) {
-                pilgrim.attack(enemy);
+                p.attack(enemy);
                 
                 
                 if (!enemy.isAlive()) {
                     break;
                 }
                 
-                enemy.attack(pilgrim);
+                enemy.attack(p);
             }
-            if (pilgrim.isAlive()) {
+            if (p.isAlive()) {
                 System.out.println("You have defeated " + enemy.getName() + "!");
             }
             else {
                 System.out.println("You were defeated.");
+                return true;
             }
             if (scan.equals("Use Item")) {
-                System.out.println( "Use what:"+ "/n" + pilgrim.getInventory());
+                System.out.println( "Use what:"+ "/n" + p.getInventory());
                 
-                pilgrim.Use(scan);
+                p.Use(scan);
                 
                 if (!enemy.isAlive()) {
                     break;
