@@ -26,6 +26,9 @@ public class UseCommand extends Command
         guy.food += item.foodRecov;
         guy.water += item.waterRecov;
         guy.health += item.healthRecov;
+        System.out.println("You used a " + item + " and it recovered\n" + 
+        item.foodRecov + " Food\n" + item.healthRecov + " Health\n" + 
+            item.waterRecov + "Water");
         return false;
     }
 }

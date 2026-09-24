@@ -71,7 +71,7 @@ public class Pilgrim extends Player
     
     public void addItem(Item item)
     {
-        Inventory.addItem(item);
+        inventory.addItem(item);
     }
     
     public void addItem()
