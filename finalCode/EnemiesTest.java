@@ -10,9 +10,9 @@ public class EnemiesTest extends student.TestCase {
             
     }
     public void testGetName() {
-        assertEquals("Enemy1" , enemy1.getName());
+        assertTrue(enemy1.getName().equals("Enemy1"));
         enemy1.setName("Test Enemy");
-        assertEquals("Test Enemy", enemy1.getName());
+        assertTrue(enemy1.getName().equals("Test Enemy"));
     }
     public void testGetDamage() {
         assertEquals(10, enemy1.getDamage());
