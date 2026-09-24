@@ -35,6 +35,11 @@ public class Adventure
         commands.addCommand("southeast", new MovementCommand("southeast"));
         commands.addCommand("northwest", new MovementCommand("northwest"));
         commands.addCommand("southwest", new MovementCommand("southwest"));
+        commands.addCommand("attack", new AttackCommand());
+        commands.addCommand("challange", new ChallengeCommand());
+        commands.addCommand("drop", new DropCommand());
+        commands.addCommand("take", new TakeCommand());
+        commands.addCommand("use", new UseCommand());
     }
 
 
@@ -54,18 +59,6 @@ public class Adventure
         SunCross.addItem(brokenBlade);
         
         SunCross.addEnemy(bandit);
-        
-    }
-    
-
-    public void placeItems()
-    {
-        //Place
-    }
-
-
-    public void connectRooms()
-    {
         
     }
 }
