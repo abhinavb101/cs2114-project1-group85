@@ -3,12 +3,9 @@ import student.adventure.*;
 public class UseCommand extends Command
 {
   //~ Fields ................................................................
-    private Adventure game;
-    private Pilgrim pilgrim;
     //~ Constructors ..........................................................
-    public UseCommand(Adventure game, Pilgrim pilgrim) {
-        this.game = game;
-        this.pilgrim = pilgrim;
+    public UseCommand() {
+        super();
     }
     //~Public  Methods ........................................................
     
@@ -33,7 +30,14 @@ public class UseCommand extends Command
 
     @Override
     public boolean execute(Player player) {
-        // 
+        Pilgrim guy = (Pilgrim) player;
+        if (!hasSecondWord())
+        {
+            System.out.println("What do you want to use?");
+            return false;
+        }
+        String itemName = getSecondWord().toLowerCase();
+        VitalityItem item = guy.removeItem(itemName);
         return false;
     }
 }
