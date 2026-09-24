@@ -31,6 +31,11 @@ public class Pilgrim extends Player
         super.setCurrentRoom(newRoom);
     }
     
+    public Location getCurrentRoom()
+    {
+        return this.getCurrentRoom();
+    }
+    
     public int getHealth()
     {
         return health;
@@ -67,6 +72,13 @@ public class Pilgrim extends Player
     public String inventoryToString()
     {
         return "You have: " + inventory;
+    }
+    
+    public String displayLocation()
+    {
+        String room = this.getCurrentRoom().getName();
+        String result = "You are currently in " + room;
+        return result;
     }
     
     public void addItem(Item item)

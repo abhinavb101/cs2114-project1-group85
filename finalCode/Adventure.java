@@ -1,14 +1,14 @@
 package finalCode;
-
+import student.adventure.Command;
 import student.adventure.*;
+import Game;
+import java.util.*;
+
 
 public class Adventure
-    extends Game
+extends Game
 {
-    public static void main(String[] args)
-    {
-        System.out.println("Lets Hope This Works.");
-    }
+    
     public Adventure()
     {
         super(new Pilgrim(), new Parser());
@@ -51,16 +51,18 @@ public class Adventure
     public void createRooms()
     {
 
-        Location SunCross = new Location(
+        Location SunCross = new Location("Sunless Cross",
             "You find yourself in Sunless Cross, "
                 + "an almost barren wastland deprived of any life, "
-                + "yet something lingers around you.",
+                + "yet something lingers around you."
             false);
+        
         Weapon brokenBlade =
             new Weapon("Broken Blade", "A worn down, completely broken blade ", true, 1);
         Weapon reward = new Weapon("Kunai","Throwable blades, sharp to the touch", true, 2);
         Enemies bandit = new Enemies("Weak Bandit", 2, 10, reward);    
         SunCross.addItem(brokenBlade);
+        //wll
         
         SunCross.addEnemy(bandit);
     }

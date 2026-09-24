@@ -8,15 +8,17 @@ public class Location extends Room
     private List<VitalityItem> vitBag;
     private List<Weapon> weaponBag;
     private List<Enemies> enemyBag;
+    String name;
     private boolean event;
     //~ Constructors ..........................................................
     /**
      * Initializes a newly created Location object.
      * @param description is the description of the given location.
      */
-    public Location(String description, boolean newEvent)
+    public Location(String name, String description, boolean newEvent)
     {
         super(description);
+        this.name = name;
         event = newEvent;
         vitBag = new ArrayList<VitalityItem>();
         weaponBag = new ArrayList<Weapon>();
@@ -24,6 +26,9 @@ public class Location extends Room
         enemyBag = new ArrayList<Enemies>();
     }
     //~Public  Methods ........................................................
+    public String getName() {
+        return this.name;
+    }
     public void addItem(VitalityItem added)
     {
         vitBag.add(added);
