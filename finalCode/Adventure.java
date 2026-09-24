@@ -54,7 +54,7 @@ extends Game
         Location SunCross = new Location("Sunless Cross",
             "You find yourself in Sunless Cross, "
                 + "an almost barren wastland deprived of any life, "
-                + "yet something lingers around you."
+                + "yet something lingers around you.", 
             false);
         
         Weapon brokenBlade =

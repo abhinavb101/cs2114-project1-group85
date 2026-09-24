@@ -19,12 +19,12 @@ public class DropCommand extends Command
             return false;
         }
         String item = getSecondWord().toLowerCase();
-        //Item dropped = guy.removeItem(item);
-        //if (dropped) == null)
-        //{
-            //System.out.println(item + "is not in your bag.");
-            //return false;
-        //}
+        Item dropped = guy.removeItem(item);
+        if (dropped == null)
+        {
+            System.out.println(item + "is not in your bag.");
+            return false;
+        }
         return false;
     }
 }
