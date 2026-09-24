@@ -21,8 +21,8 @@ public ChallengeCommand() {
         super();
     }
     
-    public boolean execute(Pilgrim pilgrim) {
-        Pilgrim p = (Pilgrim) pilgrim;
+    public boolean execute(Player player) {
+        Pilgrim p = (Pilgrim) player;
         if (!hasSecondWord())
         {
             System.out.println("Challenge what?");
