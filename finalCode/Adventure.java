@@ -62,13 +62,23 @@ extends Game
             false);
         
         Weapon brokenBlade =
-            new Weapon("Broken Blade", "A worn down, completely broken blade ", true, 1);
+            new Weapon("Broken-Blade", "A worn down, completely broken blade ", true, 1);
         Weapon reward = new Weapon("Kunai","Throwable blades, sharp to the touch", true, 2);
         Enemies bandit = new Enemies("Weak Bandit", 2, 10, reward);    
         SunCross.addItem(brokenBlade);
         //wll
         
         SunCross.addEnemy(bandit);
+        
+        Location Test = new Location("Chantry of the Silent Penitent",
+            "in the Pale drifts of ash blanket the cracked flagstones of the ruined chapel,\n"
+            + "where rows of desiccated corpses kneel among guttering wax candles in\n"
+            + "frozen supplication. At the far dais, a massive iron door bound in rusted\n"
+            + "chains looms behind an armored knight, pinned to the altar stone by a greatsword\n"
+            + "that still faintly smolders. ", false);
+            
+        SunCross.setExit("north", Test);
+        Test.setExit("south", SunCross);
         player().setCurrentRoom(SunCross);
     }
 }

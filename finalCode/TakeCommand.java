@@ -24,6 +24,14 @@ public TakeCommand()
         if (taken.getClass().equals(VitalityItem.class))
         {
             VitalityItem picked = curr.removeVitItem(taken);
+            System.out.println("You took " + taken + ".");
+            return false;
+        }
+        if (taken.getClass().equals(Weapon.class))
+        {
+            Weapon picked = curr.removeWeapon(taken);
+            System.out.println("You took " + taken + ".");
+            return false;
         }
         return false;
     }
