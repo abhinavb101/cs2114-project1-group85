@@ -5,6 +5,10 @@ import student.adventure.*;
 public class Adventure
     extends Game
 {
+    public static void main(String[] args)
+    {
+        System.out.println("Lets Hope This Works.");
+    }
     public Adventure()
     {
         super(new Pilgrim(), new Parser());
@@ -59,6 +63,5 @@ public class Adventure
         SunCross.addItem(brokenBlade);
         
         SunCross.addEnemy(bandit);
-        
     }
 }
