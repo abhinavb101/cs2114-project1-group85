@@ -33,6 +33,8 @@ public TakeCommand()
             System.out.println("You took " + taken + ".");
             return false;
         }
+        System.out.println("You take the " + taken + ".\n");
+        System.out.println(curr.getLongDescription());
         return false;
     }
 }

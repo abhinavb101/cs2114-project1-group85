@@ -18,7 +18,10 @@ extends Game
     public String welcomeMessage()
     {
         // TODO Auto-generated method stub
-        return "Testing";
+        return "Welcome to the Shattered Lands, traverse your way through a\n"
+            + "multitude of uninhabitable areas and fight your way past an army\n"
+            + "of enemies to claim a great sum of treasure. Make haste! Your sick\n"
+            + "family will not last long…";
     }
 
     public static void main(String[] args)
@@ -70,7 +73,7 @@ extends Game
         
         SunCross.addEnemy(bandit);
         
-        Location Test = new Location("The-Grassfields", "You finally find some greenery, rest while you can.", false);
+        Location Test = new Location("The-Grassfields", "finally at some greenery, rest while you can.", false);
             
         Location rot = new Location("Rotted Castle", "at a rotted castle, worn down by war", false);
         
