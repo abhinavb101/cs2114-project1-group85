@@ -56,7 +56,7 @@ extends Game
     {
 
         Location SunCross = new Location("Sunless Cross",
-            "You find yourself in Sunless Cross, "
+            "in Sunless Cross, "
                 + "an almost barren wastland deprived of any life, "
                 + "yet something lingers around you.", 
             false);
@@ -70,15 +70,20 @@ extends Game
         
         SunCross.addEnemy(bandit);
         
-        Location Test = new Location("Chantry of the Silent Penitent",
-            "in the Pale drifts of ash blanket the cracked flagstones of the ruined chapel,\n"
-            + "where rows of desiccated corpses kneel among guttering wax candles in\n"
-            + "frozen supplication. At the far dais, a massive iron door bound in rusted\n"
-            + "chains looms behind an armored knight, pinned to the altar stone by a greatsword\n"
-            + "that still faintly smolders. ", false);
+        Location Test = new Location("The-Grassfields", "You finally find some greenery, rest while you can.", false);
             
+        Location rot = new Location("Rotted Castle", "at a rotted castle, worn down by war", false);
+        
+        Location swamp = new Location("Murky Swamp", "in a murk swamp, a desolate, dirty swamp,", false);
+        Location lake = new Location("Lake Ifrit", "in Lake Ifrit: the abnormally warm lake, burning to the touch even.", false);
+
         SunCross.setExit("north", Test);
+        SunCross.setExit("east", rot);
+        SunCross.setExit("west", lake);
+        lake.setExit("east", SunCross);
+        rot.setExit("west", SunCross);
         Test.setExit("south", SunCross);
+        Test.setExit("north", swamp);
         player().setCurrentRoom(SunCross);
     }
 }
