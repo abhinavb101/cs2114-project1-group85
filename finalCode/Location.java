@@ -39,6 +39,10 @@ public class Location extends Room
         enemyBag.add(enemy);
     }
     
+    public List <Enemies> getEnemies()
+    {
+        return enemyBag;
+    }
     public Enemies removeEnemy(String removed)
     {
         for (int i = 0; i < enemyBag.size(); i++)

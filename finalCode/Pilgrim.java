@@ -16,14 +16,14 @@ public class Pilgrim extends Player
     int water;
     int food;
     int strength;
-    List<Item> inventory;
+    Inventory inventory;
     
     public Pilgrim() {
         health = 100;
         water = 100;
         food = 100;
         strength = 6;
-        inventory = new ArrayList<Item>();
+        inventory = new Inventory();
     }
     
     public void setCurrentRoom(Room newRoom)
@@ -59,7 +59,7 @@ public class Pilgrim extends Player
         return totalStrength;
     }
     
-    public List<Item> getInventory()
+    public Inventory getInventory()
     {
         return inventory;
     }
@@ -69,9 +69,9 @@ public class Pilgrim extends Player
         return "You have: " + inventory;
     }
     
-    public void addItem(Pilgrim weapon)
+    public void addItem(Item item)
     {
-        // Needs to be implemented
+        Inventory.addItem(item);
     }
     
     public void addItem()
