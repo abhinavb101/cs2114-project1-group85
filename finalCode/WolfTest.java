@@ -16,7 +16,14 @@ public class WolfTest extends student.TestCase {
     
     public void testWolfReward() {
         assertFalse(wolf1.isAlive());
+        // Test when wolf is dead: reward weapon is added to pilgrim and dropReward is called
+        wolf1.wolfReward(wolf1, pilgrim);
+        assertTrue(pilgrim.hasItem("Weapon1"));
         
+        // Test when wolf is alive: reward weapon should not be given
+        assertTrue(wolf2.isAlive());
+        wolf2.wolfReward(wolf2, pilgrim);
+        assertNull(pilgrim.getInventory().getItem("WolfReward"));
     }
     
     

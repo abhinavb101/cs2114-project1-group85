@@ -25,7 +25,17 @@ public class EnemiesTest extends student.TestCase {
         assertEquals(125, enemy1.gethealth());
     }
     public void testTakeDamage() {
-        
+     // Standard damage reduction
+        enemy1.takeDamage(40);
+        assertEquals(60, enemy1.gethealth());
+
+        // Overkill damage: ensures health clamps at 0
+        enemy1.takeDamage(70);
+        assertEquals(0, enemy1.gethealth());
+
+        // Further damage when already dead stays at 0
+        enemy1.takeDamage(10);
+        assertEquals(0, enemy1.gethealth());  
     }
     public void testIsAlive() {
         assertTrue(enemy1.gethealth() > 0);
@@ -33,7 +43,11 @@ public class EnemiesTest extends student.TestCase {
         assertFalse(enemy1.gethealth() > 0);
     }
     public void testAttack() {
-        
+        Pilgrim pilgrim = new Pilgrim();
+        int initialHealth = pilgrim.getHealth();
+
+        enemy1.attack(pilgrim);
+        assertEquals(initialHealth - 10, pilgrim.getHealth());
     }
     public void testGetWeapon() {
         Weapon weapon1 = new Weapon("Weapon1", "Test Weapon 1", false, 10);
@@ -44,6 +58,12 @@ public class EnemiesTest extends student.TestCase {
         
     }
     public void testDropReward() {
-        
+        // When alive, dropReward() should not trigger a drop
+        enemy1.dropReward();
+
+        // When dead, dropReward() executes the drop branch
+        enemy1.takeDamage(100);
+        assertFalse(enemy1.isAlive());
+        enemy1.dropReward();
     }
 }

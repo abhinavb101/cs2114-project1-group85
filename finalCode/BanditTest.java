@@ -11,7 +11,29 @@ public class BanditTest extends student.TestCase {
     }
 
     public void testAttack() {
-        
-    }
+        int singleHits = 0;
+        int doubleHits = 0;
+
+        for (int i = 0; i < 100 && (singleHits == 0 || doubleHits == 0); i++) {
+            Pilgrim pilgrim = new Pilgrim();
+            int startingHealth = pilgrim.getHealth();
+
+            bandit1.attack(pilgrim);
+            int damageTaken = startingHealth - pilgrim.getHealth();
+
+            if (damageTaken == 30) {
+                singleHits++;
+            } 
+            else if (damageTaken == 60) {
+                doubleHits++;
+            } 
+            else {
+                fail("Unexpected damage dealt: " + damageTaken);
+            }
+        }
+
+        assertEquals(1, Math.min(singleHits, 1));
+        assertEquals(1, Math.min(doubleHits, 1));
+    }   
 
 }
