@@ -8,26 +8,6 @@ public class UseCommand extends Command
         super();
     }
     //~Public  Methods ........................................................
-    
-    //eat item
-    public void eatFood(VitalityItem item) {
-        pilgrim.food += item.foodRecov;
-        //gets rid of item
-        pilgrim.removeItem(item); //change parameter?
-    }
-    //drink
-    public void drinkWater(VitalityItem item) {
-        pilgrim.water += item.waterRecov;
-        //gets rid of item
-        pilgrim.removeItem(item); //change parameter?
-    }
-    //bandage/heal
-    public void heal(VitalityItem item) {
-        pilgrim.health += item.healthRecov;
-        //gets rid of item
-        pilgrim.removeItem(item); //change parameter?
-    }
-
     @Override
     public boolean execute(Player player) {
         Pilgrim guy = (Pilgrim) player;
@@ -37,7 +17,15 @@ public class UseCommand extends Command
             return false;
         }
         String itemName = getSecondWord().toLowerCase();
-        VitalityItem item = guy.removeItem(itemName);
+        VitalityItem item = (VitalityItem) guy.removeItem(itemName);
+        if (item == null)
+        {
+            System.out.println("You do not have that item in your inventory.");
+            return false;
+        }
+        guy.food += item.foodRecov;
+        guy.water += item.waterRecov;
+        guy.health += item.healthRecov;
         return false;
     }
 }

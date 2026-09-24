@@ -84,27 +84,26 @@ public class Pilgrim extends Player
         return inventory.hasItem(name);
     }
     
-    public Weapon removeItem(Weapon remWeapon)
+    public Item removeItem(String removed)
     {
-        String weaponName = remWeapon.getName();
-        Item ret = inventory.removeItem(weaponName);
+        Item ret = inventory.removeItem(removed);
         if (ret == null)
         {
             return null;
         }
-        return remWeapon;
+        return ret;
     }
     
-    public VitalityItem removeItem(VitalityItem vitItem)
-    {
-        String vitName = vitItem.getName();
-        Item ret = inventory.removeItem(vitName);
-        if (ret == null)
-        {
-            return null;
-        }
-        return vitItem;
-    }
+//    public VitalityItem removeItem(VitalityItem vitItem)
+//    {
+//        String vitName = vitItem.getName();
+//        Item ret = inventory.removeItem(vitName);
+//        if (ret == null)
+//        {
+//            return null;
+//        }
+//        return vitItem;
+//    }
     
     public void takeDamage(int damage) {
         health -= damage;
