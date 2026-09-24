@@ -20,7 +20,7 @@ public class Wolf extends Enemies
         if(!wolf.isAlive()) {
             //decide which one to use
             pilgrim.addItem(rewardWeapon); //change into items?
-            wolf.dropReward();
+            //wolf.dropReward();
         }
     }
     

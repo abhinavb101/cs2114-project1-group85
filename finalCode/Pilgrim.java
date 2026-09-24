@@ -31,11 +31,11 @@ public class Pilgrim extends Player
         super.setCurrentRoom(newRoom);
     }
     
-    public Location getCurrentRoom()
-    {
-        return this.getCurrentRoom();
-    }
-    
+//    public Location getCurrentRoom()
+//    {
+//        return this.getCurrentRoom();
+//    }
+//    
     public int getHealth()
     {
         return health;
@@ -54,13 +54,12 @@ public class Pilgrim extends Player
     public int getStrength()
     {
         int totalStrength = strength;
-        for (Weapon weapons: inventory) {
-            if (weapons instanceof Weapon)
-            {
-                Weapon wea = (Weapon) weapons;
-                totalStrength += weapons.getStrength();
-            }
-        }
+//        for (HashMap.Entry<String, Item> entry : inventory.entrySet()) {
+//            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+//           
+//                Weapon wea = (Weapon) weapons;
+//                totalStrength += weapons.getStrength();
+//        }
         return totalStrength;
     }
     
@@ -74,12 +73,12 @@ public class Pilgrim extends Player
         return "You have: " + inventory;
     }
     
-    public String displayLocation()
-    {
-        String room = this.getCurrentRoom().getName();
-        String result = "You are currently in " + room;
-        return result;
-    }
+//    public String displayLocation()
+//    {
+//        String room = this.getCurrentRoom().getName();
+//        String result = "You are currently in " + room;
+//        return result;
+//    }
     
     public void addItem(Item item)
     {

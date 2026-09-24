@@ -4,7 +4,7 @@ public class ItemTest extends student.TestCase {
     private Item item1;
     
     public void setUp() {
-        item1 = new Item("Item", "Description", false));
+        item1 = new Item("Item", "Description", false);
         
     }
     

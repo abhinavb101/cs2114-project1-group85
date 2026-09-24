@@ -20,7 +20,7 @@ public class Combat
     }
     
     public void start() {
-        while (pilgrim.isAlive() && enemy.isAlive()) {
+        /*while (pilgrim.isAlive() && enemy.isAlive()) {
             System.out.println("-- Combat Begins! --" + 
         "/nActions: [Use Item] // [Attack]");
         
@@ -52,8 +52,6 @@ public class Combat
                 if (!pilgrim.isAlive()) {
                     System.out.println("You were defeated.");
                 }
-            
+         */   
         }
-    }
-}
 }

@@ -85,11 +85,11 @@ import java.util.*;
         }
         
         
-        public void dropReward()
-        {
-            if (!this.isAlive()) {
-                this.drop(rewardWeapon);
-            }
-        }
+//        public void dropReward()
+//        {
+//            if (!this.isAlive()) {
+//                this.drop(rewardWeapon);
+//            }
+//        }
        
     }

@@ -57,13 +57,13 @@ public class EnemiesTest extends student.TestCase {
         assertEquals(enemy1.getWeapon().getStrength(), weapon1.getStrength());
         
     }
-    public void testDropReward() {
-        // When alive, dropReward() should not trigger a drop
-        enemy1.dropReward();
-
-        // When dead, dropReward() executes the drop branch
-        enemy1.takeDamage(100);
-        assertFalse(enemy1.isAlive());
-        enemy1.dropReward();
-    }
+//    public void testDropReward() {
+//        // When alive, dropReward() should not trigger a drop
+//        enemy1.dropReward();
+//
+//        // When dead, dropReward() executes the drop branch
+//        enemy1.takeDamage(100);
+//        assertFalse(enemy1.isAlive());
+//        enemy1.dropReward();
+//    }
 }

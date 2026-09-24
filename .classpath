@@ -7,6 +7,5 @@
 	</classpathentry>
 	<classpathentry kind="src" path=""/>
 	<classpathentry combineaccessrules="false" kind="src" path="/CS2-Support"/>
-	<classpathentry kind="lib" path="Final Adventures of The Pilgrim/src/finalCode/Enemies.java"/>
 	<classpathentry kind="output" path=""/>
 </classpath>

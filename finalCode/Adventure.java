@@ -1,7 +1,6 @@
 package finalCode;
 import student.adventure.Command;
 import student.adventure.*;
-import Game;
 import java.util.*;
 
 
@@ -19,10 +18,15 @@ extends Game
     public String welcomeMessage()
     {
         // TODO Auto-generated method stub
-        return null;
+        return "Testing";
     }
 
-
+    public static void main(String[] args)
+    {
+        Adventure game = new Adventure();
+        game.play();
+    }
+    
     @Override
     public void createCommands()
     {
@@ -65,5 +69,6 @@ extends Game
         //wll
         
         SunCross.addEnemy(bandit);
+        player().setCurrentRoom(SunCross);
     }
 }

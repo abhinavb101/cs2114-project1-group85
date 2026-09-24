@@ -71,4 +71,9 @@ public class Inventory
 
         return result;
     }
+    
+    public void entrySet()
+    {
+        items.entrySet();
+    }
 }

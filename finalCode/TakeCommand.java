@@ -23,9 +23,8 @@ public TakeCommand()
         Location curr = (Location) guy.getCurrentRoom();
         if (taken.getClass().equals(VitalityItem.class))
         {
-            VitalityItem picked = curr.removeVitItems(taken);
+            VitalityItem picked = curr.removeVitItem(taken);
         }
         return false;
-    }
     }
 }
