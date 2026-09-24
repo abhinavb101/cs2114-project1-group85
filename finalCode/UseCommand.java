@@ -37,7 +37,8 @@ public class UseCommand extends Command
             return false;
         }
         String itemName = getSecondWord().toLowerCase();
-        VitalityItem item = guy.removeItem(itemName);
+        VitalityItem item = (VitalityItem) guy.removeItem(itemName);
+        
         return false;
     }
 }
